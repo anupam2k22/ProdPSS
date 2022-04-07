@@ -1,0 +1,26 @@
+<div *ngIf="_flag" [@fade]>
+<table style="width:100%;"class="table">  
+    <thead class="thead-dark">  
+        <tr>  
+            <th>File ID</th>  
+            <th>File Name</th>  
+            <th>Received Date</th>
+            <th>Current Status</th> 
+            <th>Actions</th> 
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let fileInfo of _responsefromApp">  
+            <td>{{fileInfo.File_Id}}</td>  
+            <td>{{fileInfo.Input_FileName}}</td>  
+            <td>{{fileInfo.Received_Date | date: 'MM/dd/yyyy hh:mm:ss'}}</td>  
+            <td>{{fileInfo.Status_descriptions}}</td>
+            <td>
+                <form #fileName="ngForm" (ngSubmit)="fileSubmit((fileInfo.File_Id))">
+                    <input type="submit" value="Delete" class="btn btn-danger"/>
+                </form>
+            </td>  
+        </tr>    
+    </tbody>  
+  </table>        
+</div>

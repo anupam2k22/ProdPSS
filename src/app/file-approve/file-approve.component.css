@@ -1,0 +1,12 @@
+.inputText
+{
+border:none;
+border-bottom: 1px solid rgb(49, 47, 47);
+background:transparent;
+outline:none;
+height:40px;
+width: 190%;
+font-size:16px;
+color:rgb(20, 19, 19);
+
+}

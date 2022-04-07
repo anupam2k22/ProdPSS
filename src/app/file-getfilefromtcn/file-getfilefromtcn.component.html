@@ -1,0 +1,9 @@
+<form #fileName="ngForm" (ngSubmit)="fileSubmit(fileName.value)"> 
+    <div style="position: absolute;top:15%;left:40%;" [@fade]>
+      <input type="text" class="inputText" name="fileName" placeholder="Enter the TCN" ngModel>
+      <input type="submit" value="Get Filenames" class="btn btn-dark" style="position: absolute;top:20%;left:200%;"/>  
+    </div>
+    <div style="position: absolute;top:21%;left:25%; width:70%">
+      <app-tabview-getfile *ngIf="_flag" [_responsefromApp]='_response' [_TCN] = _TCN></app-tabview-getfile>
+    </div> 
+</form>
